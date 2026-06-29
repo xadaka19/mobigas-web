@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mobigas.co.ke/sitemap.xml
