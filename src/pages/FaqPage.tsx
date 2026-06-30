@@ -114,12 +114,22 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 
 export default function FaqPage() {
   const navigate = useNavigate()
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.flatMap(section => section.items.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": { "@type": "Answer", "text": item.a },
+    }))),
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Gas on Credit FAQ | How MobiGas Works in Kenya</title>
         <meta name="description" content="Frequently asked questions about ordering gas on credit, repayment via M-Pesa, becoming a MobiGas vendor, and how our partner banks provide instant credit decisions." />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
       <div className="bg-[#0D1B40] py-6 px-6">
         <div className="max-w-3xl mx-auto flex items-center gap-4">

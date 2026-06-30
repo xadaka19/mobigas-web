@@ -24,6 +24,7 @@ function Home() {
       <Helmet>
         <title>MobiGas - Gas on Credit Kenya | Cooking Gas Delivery, Pay Later via M-Pesa</title>
         <meta name="description" content="Order cooking gas on credit in Kenya. MobiGas delivers LPG gas in 10-40 minutes - pay your partner bank within 30 days via M-Pesa. No cash needed upfront." />
+        <script type="application/ld+json">{`{"@context":"https://schema.org","@type":"Organization","name":"MobiGas","url":"https://mobigas.co.ke","logo":"https://mobigas.co.ke/favicon.svg","description":"Kenya's first gas-on-credit delivery platform. Order cooking gas now, pay within 30 days via M-Pesa.","email":"hello@mobigas.co.ke","areaServed":"KE","sameAs":[]}`}</script>
       </Helmet>
       <Nav />
       <Hero />
