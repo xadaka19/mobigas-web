@@ -15,7 +15,7 @@ const content: Record<string, { title: string; sections: { heading: string; body
       { heading: '8. Termination', body: 'MobiGas may suspend or terminate accounts that violate these terms, engage in fraudulent activity, or default on credit obligations. Termination does not waive any outstanding obligations to partner banks.' },
       { heading: '9. Limitation of Liability', body: 'MobiGas is a platform intermediary and is not liable for actions of vendors, partner banks, or third parties. Our liability is limited to the fees collected by MobiGas on your transactions.' },
       { heading: '10. Governing Law', body: 'These terms are governed by the laws of Kenya. Any disputes shall be resolved under Kenyan jurisdiction.' },
-      { heading: '11. Contact', body: 'For questions about these terms, contact us at legal@mobigas.co.ke or call +254 700 000 000.' },
+      { heading: '11. Contact', body: 'For questions about these terms, contact us at legal@mobigas.co.ke.' },
     ],
   },
   privacy: {
@@ -29,7 +29,7 @@ const content: Record<string, { title: string; sections: { heading: string; body
       { heading: '6. Your Rights', body: 'Under the Kenya Data Protection Act 2019, you have the right to: Access your personal data; Correct inaccurate data; Object to processing; Request data portability; Lodge a complaint with the ODPC. Contact: privacy@mobigas.co.ke' },
       { heading: '7. CRB & Credit Consent', body: 'By applying for gas credit on MobiGas, you consent to sharing your personal and financial information with partner financial institutions for credit assessment, including Credit Reference Bureau (CRB) checks.' },
       { heading: '8. Changes to This Policy', body: 'We may update this Privacy Policy from time to time. We will notify you of significant changes via the app. Continued use of MobiGas after changes constitutes acceptance.' },
-      { heading: '9. Contact', body: 'Data Protection Officer: dpo@mobigas.co.ke | Office: Nairobi, Kenya | Phone: +254 700 000 000' },
+      { heading: '9. Contact', body: 'Data Protection Officer: dpo@mobigas.co.ke | Office: Nairobi, Kenya' },
     ],
   },
   data: {

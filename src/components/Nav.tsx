@@ -18,6 +18,7 @@ export default function Nav() {
           <a href="#how-it-works" className="text-gray-600 hover:text-[#F97316] transition-colors text-sm font-medium">How it works</a>
           <a href="#for-vendors" className="text-gray-600 hover:text-[#F97316] transition-colors text-sm font-medium">For vendors</a>
           <a href="#why-mobigas" className="text-gray-600 hover:text-[#F97316] transition-colors text-sm font-medium">Why MobiGas</a>
+          <a href="/faq" className="text-gray-600 hover:text-[#F97316] transition-colors text-sm font-medium">FAQ</a>
           <a href="#download" className="bg-[#F97316] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-orange-600 transition-colors">
             Get the app
           </a>
@@ -33,6 +34,7 @@ export default function Nav() {
           <a href="#how-it-works" className="block text-gray-600 font-medium" onClick={() => setOpen(false)}>How it works</a>
           <a href="#for-vendors" className="block text-gray-600 font-medium" onClick={() => setOpen(false)}>For vendors</a>
           <a href="#why-mobigas" className="block text-gray-600 font-medium" onClick={() => setOpen(false)}>Why MobiGas</a>
+          <a href="/faq" className="block text-gray-600 font-medium">FAQ</a>
           <a href="#download" className="block bg-[#F97316] text-white px-5 py-2.5 rounded-full text-sm font-semibold text-center" onClick={() => setOpen(false)}>Get the app</a>
         </div>
       )}

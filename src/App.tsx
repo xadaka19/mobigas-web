@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HelmetProvider, Helmet } from 'react-helmet-async'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
@@ -7,11 +8,23 @@ import WhyMobiGas from './components/WhyMobiGas'
 import Stats from './components/Stats'
 import Download from './components/Download'
 import Footer from './components/Footer'
+import ChatBot from './components/ChatBot'
 import LegalPage from './pages/LegalPage'
+import FaqPage from './pages/FaqPage'
+import AreasPage from './pages/AreasPage'
+import CountyPage from './pages/CountyPage'
+import VendorAreasPage from './pages/VendorAreasPage'
+import BuyGasOnCreditPage from './pages/BuyGasOnCreditPage'
+import GasVendorLoanPage from './pages/GasVendorLoanPage'
+import VendorCountyPage from './pages/VendorCountyPage'
 
 function Home() {
   return (
     <>
+      <Helmet>
+        <title>MobiGas - Gas on Credit Kenya | Cooking Gas Delivery, Pay Later via M-Pesa</title>
+        <meta name="description" content="Order cooking gas on credit in Kenya. MobiGas delivers LPG gas in 10-40 minutes - pay your partner bank within 30 days via M-Pesa. No cash needed upfront." />
+      </Helmet>
       <Nav />
       <Hero />
       <Stats />
@@ -20,20 +33,30 @@ function Home() {
       <ForVendors />
       <Download />
       <Footer />
+      <ChatBot />
     </>
   )
 }
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/terms" element={<LegalPage type="terms" />} />
         <Route path="/privacy" element={<LegalPage type="privacy" />} />
         <Route path="/data-protection" element={<LegalPage type="data" />} />
         <Route path="/odpc" element={<LegalPage type="odpc" />} />
+        <Route path="/faq" element={<FaqPage />} />
+        <Route path="/areas" element={<AreasPage />} />
+        <Route path="/areas/:slug" element={<CountyPage />} />
+        <Route path="/vendors" element={<VendorAreasPage />} />
+        <Route path="/vendors/:slug" element={<VendorCountyPage />} />
+        <Route path="/buy-gas-on-credit" element={<BuyGasOnCreditPage />} />
+        <Route path="/gas-vendor-loan" element={<GasVendorLoanPage />} />
       </Routes>
     </BrowserRouter>
+    </HelmetProvider>
   )
 }

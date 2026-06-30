@@ -1,4 +1,4 @@
-import { Flame, Mail, Phone } from 'lucide-react'
+import { Flame, Mail } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -23,21 +23,20 @@ export default function Footer() {
                 hello@mobigas.co.ke
               </a>
             </div>
-            <div className="flex gap-4 mt-3">
-              <a href="tel:+254700000000" className="flex items-center gap-2 text-gray-400 hover:text-white text-sm transition-colors">
-                <Phone size={16} />
-                +254 700 000 000
-              </a>
-            </div>
           </div>
 
           {/* Product */}
           <div>
             <h4 className="text-white font-semibold mb-4">Product</h4>
             <ul className="space-y-3">
-              {['How it works', 'For customers', 'For vendors', 'Download app'].map(item => (
-                <li key={item}>
-                  <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">{item}</a>
+              {[
+                { label: 'How it works', href: '/#how-it-works' },
+                { label: 'For customers', href: '/#download' },
+                { label: 'For vendors', href: '/#for-vendors' },
+                { label: 'Download app', href: '/#download' },
+              ].map(({ label, href }) => (
+                <li key={label}>
+                  <a href={href} className="text-gray-400 hover:text-white text-sm transition-colors">{label}</a>
                 </li>
               ))}
             </ul>
