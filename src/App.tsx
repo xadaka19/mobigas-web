@@ -16,6 +16,8 @@ import CountyPage from './pages/CountyPage'
 import VendorAreasPage from './pages/VendorAreasPage'
 import BuyGasOnCreditPage from './pages/BuyGasOnCreditPage'
 import GasVendorLoanPage from './pages/GasVendorLoanPage'
+import GasPricesPage from './pages/GasPricesPage'
+import SameDayDeliveryPage from './pages/SameDayDeliveryPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
 function Home() {
@@ -56,6 +58,8 @@ export default function App() {
         <Route path="/vendors/:slug" element={<VendorCountyPage />} />
         <Route path="/buy-gas-on-credit" element={<BuyGasOnCreditPage />} />
         <Route path="/gas-vendor-loan" element={<GasVendorLoanPage />} />
+        <Route path="/cooking-gas-prices-kenya" element={<GasPricesPage />} />
+        <Route path="/gas-delivery-same-day" element={<SameDayDeliveryPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>

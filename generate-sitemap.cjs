@@ -16,6 +16,8 @@ const staticUrls = [
   { loc: '/vendors', priority: '0.8', changefreq: 'monthly' },
   { loc: '/buy-gas-on-credit', priority: '0.9', changefreq: 'monthly' },
   { loc: '/gas-vendor-loan', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/cooking-gas-prices-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-delivery-same-day', priority: '0.8', changefreq: 'monthly' },
 ];
 
 const countyUrls = counties.map(c => ({
