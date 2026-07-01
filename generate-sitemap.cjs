@@ -86,6 +86,16 @@ const staticUrls = [
   { loc: '/gas-delivery-kikuyu', priority: '0.8', changefreq: 'weekly' },
   { loc: '/gas-delivery-athi-river', priority: '0.8', changefreq: 'weekly' },
   { loc: '/gas-delivery-limuru', priority: '0.7', changefreq: 'weekly' },
+  { loc: '/gas-delivery-kahawa', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/gas-delivery-embakasi', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/gas-delivery-kabete', priority: '0.7', changefreq: 'weekly' },
+  { loc: '/gas-delivery-dagoretti', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/gas-delivery-langata', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/gas-delivery-westlands', priority: '0.9', changefreq: 'weekly' },
+  { loc: '/gas-delivery-kilimani', priority: '0.9', changefreq: 'weekly' },
+  { loc: '/gas-delivery-kasarani', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/gas-delivery-eastleigh', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/gas-delivery-kibera', priority: '0.8', changefreq: 'weekly' },
 ];
 
 const countyUrls = counties.map(c => ({

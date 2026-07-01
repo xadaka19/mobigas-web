@@ -85,6 +85,16 @@ import JujaPage from './pages/cities/JujaPage'
 import KikuyuPage from './pages/cities/KikuyuPage'
 import AtriRiverPage from './pages/cities/AtriRiverPage'
 import LimuruPage from './pages/cities/LimuruPage'
+import KahawePage from './pages/cities/KahawePage'
+import EmbakasPage from './pages/cities/EmbakasPage'
+import KabetePage from './pages/cities/KabetePage'
+import DagorettiPage from './pages/cities/DagorettiPage'
+import LangataPage from './pages/cities/LangataPage'
+import WestlandsPage from './pages/cities/WestlandsPage'
+import KilimaniPage from './pages/cities/KilimaniPage'
+import KasaraniPage from './pages/cities/KasaraniPage'
+import EastleighPage from './pages/cities/EastleighPage'
+import KiberaPage from './pages/cities/KiberaPage'
 import BusinessGasPage from './pages/BusinessGasPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
@@ -196,6 +206,16 @@ export default function App() {
         <Route path="/gas-delivery-kikuyu" element={<KikuyuPage />} />
         <Route path="/gas-delivery-athi-river" element={<AtriRiverPage />} />
         <Route path="/gas-delivery-limuru" element={<LimuruPage />} />
+        <Route path="/gas-delivery-kahawa" element={<KahawePage />} />
+        <Route path="/gas-delivery-embakasi" element={<EmbakasPage />} />
+        <Route path="/gas-delivery-kabete" element={<KabetePage />} />
+        <Route path="/gas-delivery-dagoretti" element={<DagorettiPage />} />
+        <Route path="/gas-delivery-langata" element={<LangataPage />} />
+        <Route path="/gas-delivery-westlands" element={<WestlandsPage />} />
+        <Route path="/gas-delivery-kilimani" element={<KilimaniPage />} />
+        <Route path="/gas-delivery-kasarani" element={<KasaraniPage />} />
+        <Route path="/gas-delivery-eastleigh" element={<EastleighPage />} />
+        <Route path="/gas-delivery-kibera" element={<KiberaPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>
