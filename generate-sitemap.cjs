@@ -116,6 +116,14 @@ const staticUrls = [
   { loc: '/gas-delivery-mtwapa', priority: '0.8', changefreq: 'weekly' },
   { loc: '/gas-delivery-kilifi-town', priority: '0.7', changefreq: 'weekly' },
   { loc: '/gas-delivery-taveta', priority: '0.7', changefreq: 'weekly' },
+  { loc: '/gas-cylinder-swap-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-for-landlords-kenya', priority: '0.7', changefreq: 'monthly' },
+  { loc: '/mobigas-referral', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-credit-limit-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/lpg-cylinder-sizes-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-vendor-earn-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/cooking-gas-safety-kenya', priority: '0.7', changefreq: 'monthly' },
+  { loc: '/mobigas-partner-banks', priority: '0.7', changefreq: 'monthly' },
 ];
 
 const countyUrls = counties.map(c => ({

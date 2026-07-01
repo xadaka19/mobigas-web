@@ -115,6 +115,14 @@ import NyahururuPage from './pages/cities/NyahururuPage'
 import MtombaPage from './pages/cities/MtombaPage'
 import KilifiTownPage from './pages/cities/KilifiTownPage'
 import TavetaPage from './pages/cities/TavetaPage'
+import GasCylinderSwapPage from './pages/GasCylinderSwapPage'
+import LandlordsGasPage from './pages/LandlordsGasPage'
+import ReferralPage from './pages/ReferralPage'
+import GasCreditLimitPage from './pages/GasCreditLimitPage'
+import CylinderSizesPage from './pages/CylinderSizesPage'
+import VendorEarnPage from './pages/VendorEarnPage'
+import GasSafetyPage from './pages/GasSafetyPage'
+import PartnerBanksPage from './pages/PartnerBanksPage'
 import BusinessGasPage from './pages/BusinessGasPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
@@ -256,6 +264,14 @@ export default function App() {
         <Route path="/gas-delivery-mtwapa" element={<MtombaPage />} />
         <Route path="/gas-delivery-kilifi-town" element={<KilifiTownPage />} />
         <Route path="/gas-delivery-taveta" element={<TavetaPage />} />
+        <Route path="/gas-cylinder-swap-kenya" element={<GasCylinderSwapPage />} />
+        <Route path="/gas-for-landlords-kenya" element={<LandlordsGasPage />} />
+        <Route path="/mobigas-referral" element={<ReferralPage />} />
+        <Route path="/gas-credit-limit-kenya" element={<GasCreditLimitPage />} />
+        <Route path="/lpg-cylinder-sizes-kenya" element={<CylinderSizesPage />} />
+        <Route path="/gas-vendor-earn-kenya" element={<VendorEarnPage />} />
+        <Route path="/cooking-gas-safety-kenya" element={<GasSafetyPage />} />
+        <Route path="/mobigas-partner-banks" element={<PartnerBanksPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>
