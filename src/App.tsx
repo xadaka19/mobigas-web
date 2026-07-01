@@ -65,6 +65,16 @@ import WajirPage from './pages/cities/WajirPage'
 import ManderaPage from './pages/cities/ManderaPage'
 import IsioloPage from './pages/cities/IsioloPage'
 import NanyukiPage from './pages/cities/NanyukiPage'
+import NarokPage from './pages/cities/NarokPage'
+import KabarnetPage from './pages/cities/KabarnetPage'
+import LamuPage from './pages/cities/HolaPage2'
+import ChukkaPage from './pages/cities/ChukkaPage'
+import WotePage from './pages/cities/WotePage'
+import OlKalouPage from './pages/cities/OlKalouPage'
+import KerugoyaPage from './pages/cities/KerugoyaPage'
+import BometPage from './pages/cities/BometPage'
+import SiayaPage from './pages/cities/SiayaPage'
+import NyamiraPage from './pages/cities/NyamiraPage'
 import BusinessGasPage from './pages/BusinessGasPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
@@ -156,6 +166,16 @@ export default function App() {
         <Route path="/gas-delivery-mandera" element={<ManderaPage />} />
         <Route path="/gas-delivery-isiolo" element={<IsioloPage />} />
         <Route path="/gas-delivery-nanyuki" element={<NanyukiPage />} />
+        <Route path="/gas-delivery-narok" element={<NarokPage />} />
+        <Route path="/gas-delivery-kabarnet" element={<KabarnetPage />} />
+        <Route path="/gas-delivery-lamu" element={<LamuPage />} />
+        <Route path="/gas-delivery-chuka" element={<ChukkaPage />} />
+        <Route path="/gas-delivery-wote" element={<WotePage />} />
+        <Route path="/gas-delivery-ol-kalou" element={<OlKalouPage />} />
+        <Route path="/gas-delivery-kerugoya" element={<KerugoyaPage />} />
+        <Route path="/gas-delivery-bomet" element={<BometPage />} />
+        <Route path="/gas-delivery-siaya" element={<SiayaPage />} />
+        <Route path="/gas-delivery-nyamira" element={<NyamiraPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>
