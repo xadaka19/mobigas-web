@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider, Helmet } from 'react-helmet-async'
 import Nav from './components/Nav'
@@ -9,122 +10,122 @@ import Stats from './components/Stats'
 import Download from './components/Download'
 import Footer from './components/Footer'
 import ChatBot from './components/ChatBot'
-import LegalPage from './pages/LegalPage'
-import FaqPage from './pages/FaqPage'
-import AreasPage from './pages/AreasPage'
-import CountyPage from './pages/CountyPage'
-import VendorAreasPage from './pages/VendorAreasPage'
-import BuyGasOnCreditPage from './pages/BuyGasOnCreditPage'
-import GasVendorLoanPage from './pages/GasVendorLoanPage'
-import GasPricesPage from './pages/GasPricesPage'
-import SameDayDeliveryPage from './pages/SameDayDeliveryPage'
-import TrustPage from './pages/TrustPage'
-import GasLoanAppsPage from './pages/GasLoanAppsPage'
-import GasBrandsPage from './pages/GasBrandsPage'
-import HowToGetGasCreditPage from './pages/HowToGetGasCreditPage'
-import VendorRegistrationPage from './pages/VendorRegistrationPage'
-import NairobiPage from './pages/cities/NairobiPage'
-import MombasaPage from './pages/cities/MombasaPage'
-import KisumuPage from './pages/cities/KisumuPage'
-import NakuruPage from './pages/cities/NakuruPage'
-import EldoretPage from './pages/cities/EldoretPage'
-import KiambuPage from './pages/cities/KiambuPage'
-import ThikaPage from './pages/cities/ThikaPage'
-import GasDeliveryAppPage from './pages/GasDeliveryAppPage'
-import LpgGasDeliveryPage from './pages/LpgGasDeliveryPage'
-import EmergencyGasPage from './pages/EmergencyGasPage'
-import MpesaGasPage from './pages/MpesaGasPage'
-import GasNoDepositPage from './pages/GasNoDepsositPage'
-import HowMobiGasWorksPage from './pages/HowMobiGasWorksPage'
-import StudentsGasPage from './pages/StudentsGasPage'
-import AffordableGasPage from './pages/AffordableGasPage'
-import MachakosPage from './pages/cities/MachakosPage'
-import MeruPage from './pages/cities/MeruPage'
-import NyeriPage from './pages/cities/NyeriPage'
-import KakamegaPage from './pages/cities/KakamegaPage'
-import KerichoPage from './pages/cities/KerichoPage'
-import EmbuPage from './pages/cities/EmbuPage'
-import GarissaPage from './pages/cities/GarissaPage'
-import MalindiPage from './pages/cities/MalindiPage'
-import KisiiPage from './pages/cities/KisiiPage'
-import BungomPage from './pages/cities/BungomPage'
-import NaivhashaPage from './pages/cities/NaivhashaPage'
-import KapsabetPage from './pages/cities/KapsabetPage'
-import MumiastPage from './pages/cities/MumiastPage'
-import VoiPage from './pages/cities/VoiPage'
-import MigoriPage from './pages/cities/MigoriPage'
-import HolaPage from './pages/cities/HolaPage'
-import KituiPage from './pages/cities/KituiPage'
-import LodwarPage from './pages/cities/LodwarPage'
-import MaralalPage from './pages/cities/MaralalPage'
-import KitaleePage from './pages/cities/KitaleePage'
-import HombayPage from './pages/cities/HombayPage'
-import KapenguriaPage from './pages/cities/KapenguriaPage'
-import MarsakitPage from './pages/cities/MarsakitPage'
-import WajirPage from './pages/cities/WajirPage'
-import ManderaPage from './pages/cities/ManderaPage'
-import IsioloPage from './pages/cities/IsioloPage'
-import NanyukiPage from './pages/cities/NanyukiPage'
-import NarokPage from './pages/cities/NarokPage'
-import KabarnetPage from './pages/cities/KabarnetPage'
-import LamuPage from './pages/cities/HolaPage2'
-import ChukkaPage from './pages/cities/ChukkaPage'
-import WotePage from './pages/cities/WotePage'
-import OlKalouPage from './pages/cities/OlKalouPage'
-import KerugoyaPage from './pages/cities/KerugoyaPage'
-import BometPage from './pages/cities/BometPage'
-import SiayaPage from './pages/cities/SiayaPage'
-import NyamiraPage from './pages/cities/NyamiraPage'
-import ItenPage from './pages/cities/MoiUniversityPage'
-import RumurtiPage from './pages/cities/RumurtiPage'
-import LiteinPage from './pages/cities/LiteinPage'
-import WebueyePage from './pages/cities/WebueyePage'
-import KanduduPage from './pages/cities/KanduduPage'
-import RuiruPage from './pages/cities/RuiruPage'
-import JujaPage from './pages/cities/JujaPage'
-import KikuyuPage from './pages/cities/KikuyuPage'
-import AtriRiverPage from './pages/cities/AtriRiverPage'
-import LimuruPage from './pages/cities/LimuruPage'
-import KahawePage from './pages/cities/KahawePage'
-import EmbakasPage from './pages/cities/EmbakasPage'
-import KabetePage from './pages/cities/KabetePage'
-import DagorettiPage from './pages/cities/DagorettiPage'
-import LangataPage from './pages/cities/LangataPage'
-import WestlandsPage from './pages/cities/WestlandsPage'
-import KilimaniPage from './pages/cities/KilimaniPage'
-import KasaraniPage from './pages/cities/KasaraniPage'
-import EastleighPage from './pages/cities/EastleighPage'
-import KiberaPage from './pages/cities/KiberaPage'
-import UkundaPage from './pages/cities/UkundaPage'
-import MoloPage from './pages/cities/MoloPage'
-import GilgilPage from './pages/cities/GilgilPage'
-import MoyalePage from './pages/cities/MoyalePage'
-import MariakaniPage from './pages/cities/MalindaiPage'
-import WatamPage from './pages/cities/WatamPage'
-import MwingiPage from './pages/cities/MwingiPage'
-import KangundoPage from './pages/cities/KangundoPage'
-import OthayaPage from './pages/cities/OthayaPage'
-import KaratniPage from './pages/cities/KaratniPage'
-import KiambuTownPage from './pages/cities/KiambuTownPage'
-import NgongPage from './pages/cities/NgongPage'
-import KitelengelaPage from './pages/cities/KitelengelaPage'
-import RongaiPage from './pages/cities/RongaiPage'
-import SaganaPage from './pages/cities/SaganaPage'
-import MurangaTownPage from './pages/cities/MurangaTownPage'
-import NyahururuPage from './pages/cities/NyahururuPage'
-import MtombaPage from './pages/cities/MtombaPage'
-import KilifiTownPage from './pages/cities/KilifiTownPage'
-import TavetaPage from './pages/cities/TavetaPage'
-import GasCylinderSwapPage from './pages/GasCylinderSwapPage'
-import LandlordsGasPage from './pages/LandlordsGasPage'
-import ReferralPage from './pages/ReferralPage'
-import GasCreditLimitPage from './pages/GasCreditLimitPage'
-import CylinderSizesPage from './pages/CylinderSizesPage'
-import VendorEarnPage from './pages/VendorEarnPage'
-import GasSafetyPage from './pages/GasSafetyPage'
-import PartnerBanksPage from './pages/PartnerBanksPage'
-import BusinessGasPage from './pages/BusinessGasPage'
-import VendorCountyPage from './pages/VendorCountyPage'
+const LegalPage = lazy(() => import('./pages/LegalPage'))
+const FaqPage = lazy(() => import('./pages/FaqPage'))
+const AreasPage = lazy(() => import('./pages/AreasPage'))
+const CountyPage = lazy(() => import('./pages/CountyPage'))
+const VendorAreasPage = lazy(() => import('./pages/VendorAreasPage'))
+const BuyGasOnCreditPage = lazy(() => import('./pages/BuyGasOnCreditPage'))
+const GasVendorLoanPage = lazy(() => import('./pages/GasVendorLoanPage'))
+const GasPricesPage = lazy(() => import('./pages/GasPricesPage'))
+const SameDayDeliveryPage = lazy(() => import('./pages/SameDayDeliveryPage'))
+const TrustPage = lazy(() => import('./pages/TrustPage'))
+const GasLoanAppsPage = lazy(() => import('./pages/GasLoanAppsPage'))
+const GasBrandsPage = lazy(() => import('./pages/GasBrandsPage'))
+const HowToGetGasCreditPage = lazy(() => import('./pages/HowToGetGasCreditPage'))
+const VendorRegistrationPage = lazy(() => import('./pages/VendorRegistrationPage'))
+const NairobiPage = lazy(() => import('./pages/cities/NairobiPage'))
+const MombasaPage = lazy(() => import('./pages/cities/MombasaPage'))
+const KisumuPage = lazy(() => import('./pages/cities/KisumuPage'))
+const NakuruPage = lazy(() => import('./pages/cities/NakuruPage'))
+const EldoretPage = lazy(() => import('./pages/cities/EldoretPage'))
+const KiambuPage = lazy(() => import('./pages/cities/KiambuPage'))
+const ThikaPage = lazy(() => import('./pages/cities/ThikaPage'))
+const GasDeliveryAppPage = lazy(() => import('./pages/GasDeliveryAppPage'))
+const LpgGasDeliveryPage = lazy(() => import('./pages/LpgGasDeliveryPage'))
+const EmergencyGasPage = lazy(() => import('./pages/EmergencyGasPage'))
+const MpesaGasPage = lazy(() => import('./pages/MpesaGasPage'))
+const GasNoDepositPage = lazy(() => import('./pages/GasNoDepsositPage'))
+const HowMobiGasWorksPage = lazy(() => import('./pages/HowMobiGasWorksPage'))
+const StudentsGasPage = lazy(() => import('./pages/StudentsGasPage'))
+const AffordableGasPage = lazy(() => import('./pages/AffordableGasPage'))
+const MachakosPage = lazy(() => import('./pages/cities/MachakosPage'))
+const MeruPage = lazy(() => import('./pages/cities/MeruPage'))
+const NyeriPage = lazy(() => import('./pages/cities/NyeriPage'))
+const KakamegaPage = lazy(() => import('./pages/cities/KakamegaPage'))
+const KerichoPage = lazy(() => import('./pages/cities/KerichoPage'))
+const EmbuPage = lazy(() => import('./pages/cities/EmbuPage'))
+const GarissaPage = lazy(() => import('./pages/cities/GarissaPage'))
+const MalindiPage = lazy(() => import('./pages/cities/MalindiPage'))
+const KisiiPage = lazy(() => import('./pages/cities/KisiiPage'))
+const BungomPage = lazy(() => import('./pages/cities/BungomPage'))
+const NaivhashaPage = lazy(() => import('./pages/cities/NaivhashaPage'))
+const KapsabetPage = lazy(() => import('./pages/cities/KapsabetPage'))
+const MumiastPage = lazy(() => import('./pages/cities/MumiastPage'))
+const VoiPage = lazy(() => import('./pages/cities/VoiPage'))
+const MigoriPage = lazy(() => import('./pages/cities/MigoriPage'))
+const HolaPage = lazy(() => import('./pages/cities/HolaPage'))
+const KituiPage = lazy(() => import('./pages/cities/KituiPage'))
+const LodwarPage = lazy(() => import('./pages/cities/LodwarPage'))
+const MaralalPage = lazy(() => import('./pages/cities/MaralalPage'))
+const KitaleePage = lazy(() => import('./pages/cities/KitaleePage'))
+const HombayPage = lazy(() => import('./pages/cities/HombayPage'))
+const KapenguriaPage = lazy(() => import('./pages/cities/KapenguriaPage'))
+const MarsakitPage = lazy(() => import('./pages/cities/MarsakitPage'))
+const WajirPage = lazy(() => import('./pages/cities/WajirPage'))
+const ManderaPage = lazy(() => import('./pages/cities/ManderaPage'))
+const IsioloPage = lazy(() => import('./pages/cities/IsioloPage'))
+const NanyukiPage = lazy(() => import('./pages/cities/NanyukiPage'))
+const NarokPage = lazy(() => import('./pages/cities/NarokPage'))
+const KabarnetPage = lazy(() => import('./pages/cities/KabarnetPage'))
+const LamuPage = lazy(() => import('./pages/cities/HolaPage2'))
+const ChukkaPage = lazy(() => import('./pages/cities/ChukkaPage'))
+const WotePage = lazy(() => import('./pages/cities/WotePage'))
+const OlKalouPage = lazy(() => import('./pages/cities/OlKalouPage'))
+const KerugoyaPage = lazy(() => import('./pages/cities/KerugoyaPage'))
+const BometPage = lazy(() => import('./pages/cities/BometPage'))
+const SiayaPage = lazy(() => import('./pages/cities/SiayaPage'))
+const NyamiraPage = lazy(() => import('./pages/cities/NyamiraPage'))
+const ItenPage = lazy(() => import('./pages/cities/MoiUniversityPage'))
+const RumurtiPage = lazy(() => import('./pages/cities/RumurtiPage'))
+const LiteinPage = lazy(() => import('./pages/cities/LiteinPage'))
+const WebueyePage = lazy(() => import('./pages/cities/WebueyePage'))
+const KanduduPage = lazy(() => import('./pages/cities/KanduduPage'))
+const RuiruPage = lazy(() => import('./pages/cities/RuiruPage'))
+const JujaPage = lazy(() => import('./pages/cities/JujaPage'))
+const KikuyuPage = lazy(() => import('./pages/cities/KikuyuPage'))
+const AtriRiverPage = lazy(() => import('./pages/cities/AtriRiverPage'))
+const LimuruPage = lazy(() => import('./pages/cities/LimuruPage'))
+const KahawePage = lazy(() => import('./pages/cities/KahawePage'))
+const EmbakasPage = lazy(() => import('./pages/cities/EmbakasPage'))
+const KabetePage = lazy(() => import('./pages/cities/KabetePage'))
+const DagorettiPage = lazy(() => import('./pages/cities/DagorettiPage'))
+const LangataPage = lazy(() => import('./pages/cities/LangataPage'))
+const WestlandsPage = lazy(() => import('./pages/cities/WestlandsPage'))
+const KilimaniPage = lazy(() => import('./pages/cities/KilimaniPage'))
+const KasaraniPage = lazy(() => import('./pages/cities/KasaraniPage'))
+const EastleighPage = lazy(() => import('./pages/cities/EastleighPage'))
+const KiberaPage = lazy(() => import('./pages/cities/KiberaPage'))
+const UkundaPage = lazy(() => import('./pages/cities/UkundaPage'))
+const MoloPage = lazy(() => import('./pages/cities/MoloPage'))
+const GilgilPage = lazy(() => import('./pages/cities/GilgilPage'))
+const MoyalePage = lazy(() => import('./pages/cities/MoyalePage'))
+const MariakaniPage = lazy(() => import('./pages/cities/MalindaiPage'))
+const WatamPage = lazy(() => import('./pages/cities/WatamPage'))
+const MwingiPage = lazy(() => import('./pages/cities/MwingiPage'))
+const KangundoPage = lazy(() => import('./pages/cities/KangundoPage'))
+const OthayaPage = lazy(() => import('./pages/cities/OthayaPage'))
+const KaratniPage = lazy(() => import('./pages/cities/KaratniPage'))
+const KiambuTownPage = lazy(() => import('./pages/cities/KiambuTownPage'))
+const NgongPage = lazy(() => import('./pages/cities/NgongPage'))
+const KitelengelaPage = lazy(() => import('./pages/cities/KitelengelaPage'))
+const RongaiPage = lazy(() => import('./pages/cities/RongaiPage'))
+const SaganaPage = lazy(() => import('./pages/cities/SaganaPage'))
+const MurangaTownPage = lazy(() => import('./pages/cities/MurangaTownPage'))
+const NyahururuPage = lazy(() => import('./pages/cities/NyahururuPage'))
+const MtombaPage = lazy(() => import('./pages/cities/MtombaPage'))
+const KilifiTownPage = lazy(() => import('./pages/cities/KilifiTownPage'))
+const TavetaPage = lazy(() => import('./pages/cities/TavetaPage'))
+const GasCylinderSwapPage = lazy(() => import('./pages/GasCylinderSwapPage'))
+const LandlordsGasPage = lazy(() => import('./pages/LandlordsGasPage'))
+const ReferralPage = lazy(() => import('./pages/ReferralPage'))
+const GasCreditLimitPage = lazy(() => import('./pages/GasCreditLimitPage'))
+const CylinderSizesPage = lazy(() => import('./pages/CylinderSizesPage'))
+const VendorEarnPage = lazy(() => import('./pages/VendorEarnPage'))
+const GasSafetyPage = lazy(() => import('./pages/GasSafetyPage'))
+const PartnerBanksPage = lazy(() => import('./pages/PartnerBanksPage'))
+const BusinessGasPage = lazy(() => import('./pages/BusinessGasPage'))
+const VendorCountyPage = lazy(() => import('./pages/VendorCountyPage'))
 
 function Home() {
   return (
@@ -151,6 +152,7 @@ export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+      <Suspense fallback={<div className="min-h-screen bg-gray-50 flex items-center justify-center"><div className="text-gray-400 text-sm">Loading...</div></div>}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/terms" element={<LegalPage type="terms" />} />
@@ -273,6 +275,7 @@ export default function App() {
         <Route path="/cooking-gas-safety-kenya" element={<GasSafetyPage />} />
         <Route path="/mobigas-partner-banks" element={<PartnerBanksPage />} />
       </Routes>
+      </Suspense>
     </BrowserRouter>
     </HelmetProvider>
   )
