@@ -23,6 +23,13 @@ import GasLoanAppsPage from './pages/GasLoanAppsPage'
 import GasBrandsPage from './pages/GasBrandsPage'
 import HowToGetGasCreditPage from './pages/HowToGetGasCreditPage'
 import VendorRegistrationPage from './pages/VendorRegistrationPage'
+import NairobiPage from './pages/cities/NairobiPage'
+import MombasaPage from './pages/cities/MombasaPage'
+import KisumuPage from './pages/cities/KisumuPage'
+import NakuruPage from './pages/cities/NakuruPage'
+import EldoretPage from './pages/cities/EldoretPage'
+import KiambuPage from './pages/cities/KiambuPage'
+import ThikaPage from './pages/cities/ThikaPage'
 import BusinessGasPage from './pages/BusinessGasPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
@@ -72,6 +79,13 @@ export default function App() {
         <Route path="/cooking-gas-brands-kenya" element={<GasBrandsPage />} />
         <Route path="/how-to-get-gas-on-credit" element={<HowToGetGasCreditPage />} />
         <Route path="/gas-vendor-registration-kenya" element={<VendorRegistrationPage />} />
+        <Route path="/gas-delivery-nairobi" element={<NairobiPage />} />
+        <Route path="/gas-delivery-mombasa" element={<MombasaPage />} />
+        <Route path="/gas-delivery-kisumu" element={<KisumuPage />} />
+        <Route path="/gas-delivery-nakuru" element={<NakuruPage />} />
+        <Route path="/gas-delivery-eldoret" element={<EldoretPage />} />
+        <Route path="/gas-delivery-kiambu" element={<KiambuPage />} />
+        <Route path="/gas-delivery-thika" element={<ThikaPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>

@@ -24,6 +24,13 @@ const staticUrls = [
   { loc: '/cooking-gas-brands-kenya', priority: '0.8', changefreq: 'monthly' },
   { loc: '/how-to-get-gas-on-credit', priority: '0.9', changefreq: 'monthly' },
   { loc: '/gas-vendor-registration-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-delivery-nairobi', priority: '0.9', changefreq: 'weekly' },
+  { loc: '/gas-delivery-mombasa', priority: '0.9', changefreq: 'weekly' },
+  { loc: '/gas-delivery-kisumu', priority: '0.9', changefreq: 'weekly' },
+  { loc: '/gas-delivery-nakuru', priority: '0.9', changefreq: 'weekly' },
+  { loc: '/gas-delivery-eldoret', priority: '0.9', changefreq: 'weekly' },
+  { loc: '/gas-delivery-kiambu', priority: '0.9', changefreq: 'weekly' },
+  { loc: '/gas-delivery-thika', priority: '0.9', changefreq: 'weekly' },
 ];
 
 const countyUrls = counties.map(c => ({
