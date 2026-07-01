@@ -34,6 +34,17 @@ import GasDeliveryAppPage from './pages/GasDeliveryAppPage'
 import LpgGasDeliveryPage from './pages/LpgGasDeliveryPage'
 import EmergencyGasPage from './pages/EmergencyGasPage'
 import MpesaGasPage from './pages/MpesaGasPage'
+import GasNoDepositPage from './pages/GasNoDepsositPage'
+import HowMobiGasWorksPage from './pages/HowMobiGasWorksPage'
+import StudentsGasPage from './pages/StudentsGasPage'
+import AffordableGasPage from './pages/AffordableGasPage'
+import MachakosPage from './pages/cities/MachakosPage'
+import MeruPage from './pages/cities/MeruPage'
+import NyeriPage from './pages/cities/NyeriPage'
+import KakamegaPage from './pages/cities/KakamegaPage'
+import KerichoPage from './pages/cities/KerichoPage'
+import EmbuPage from './pages/cities/EmbuPage'
+import GarissaPage from './pages/cities/GarissaPage'
 import BusinessGasPage from './pages/BusinessGasPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
@@ -94,6 +105,17 @@ export default function App() {
         <Route path="/lpg-gas-delivery-kenya" element={<LpgGasDeliveryPage />} />
         <Route path="/cooking-gas-emergency-kenya" element={<EmergencyGasPage />} />
         <Route path="/mpesa-gas-payment-kenya" element={<MpesaGasPage />} />
+        <Route path="/gas-on-credit-no-deposit" element={<GasNoDepositPage />} />
+        <Route path="/how-mobigas-works" element={<HowMobiGasWorksPage />} />
+        <Route path="/cooking-gas-for-students-kenya" element={<StudentsGasPage />} />
+        <Route path="/affordable-gas-kenya" element={<AffordableGasPage />} />
+        <Route path="/gas-delivery-machakos" element={<MachakosPage />} />
+        <Route path="/gas-delivery-meru" element={<MeruPage />} />
+        <Route path="/gas-delivery-nyeri" element={<NyeriPage />} />
+        <Route path="/gas-delivery-kakamega" element={<KakamegaPage />} />
+        <Route path="/gas-delivery-kericho" element={<KerichoPage />} />
+        <Route path="/gas-delivery-embu" element={<EmbuPage />} />
+        <Route path="/gas-delivery-garissa" element={<GarissaPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>

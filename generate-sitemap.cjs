@@ -35,6 +35,17 @@ const staticUrls = [
   { loc: '/lpg-gas-delivery-kenya', priority: '0.8', changefreq: 'monthly' },
   { loc: '/cooking-gas-emergency-kenya', priority: '0.8', changefreq: 'monthly' },
   { loc: '/mpesa-gas-payment-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-on-credit-no-deposit', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/how-mobigas-works', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/cooking-gas-for-students-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/affordable-gas-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-delivery-machakos', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/gas-delivery-meru', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/gas-delivery-nyeri', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/gas-delivery-kakamega', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/gas-delivery-kericho', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/gas-delivery-embu', priority: '0.8', changefreq: 'weekly' },
+  { loc: '/gas-delivery-garissa', priority: '0.8', changefreq: 'weekly' },
 ];
 
 const countyUrls = counties.map(c => ({
