@@ -501,6 +501,56 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mobigas.co.ke/gas-delivery-kiambu-town</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mobigas.co.ke/gas-delivery-ngong</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mobigas.co.ke/gas-delivery-kitengela</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mobigas.co.ke/gas-delivery-rongai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mobigas.co.ke/gas-delivery-sagana</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mobigas.co.ke/gas-delivery-muranga-town</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mobigas.co.ke/gas-delivery-nyahururu</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mobigas.co.ke/gas-delivery-mtwapa</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mobigas.co.ke/gas-delivery-kilifi-town</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mobigas.co.ke/gas-delivery-taveta</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://mobigas.co.ke/areas/mombasa</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

@@ -105,6 +105,16 @@ import MwingiPage from './pages/cities/MwingiPage'
 import KangundoPage from './pages/cities/KangundoPage'
 import OthayaPage from './pages/cities/OthayaPage'
 import KaratniPage from './pages/cities/KaratniPage'
+import KiambuTownPage from './pages/cities/KiambuTownPage'
+import NgongPage from './pages/cities/NgongPage'
+import KitelengelaPage from './pages/cities/KitelengelaPage'
+import RongaiPage from './pages/cities/RongaiPage'
+import SaganaPage from './pages/cities/SaganaPage'
+import MurangaTownPage from './pages/cities/MurangaTownPage'
+import NyahururuPage from './pages/cities/NyahururuPage'
+import MtombaPage from './pages/cities/MtombaPage'
+import KilifiTownPage from './pages/cities/KilifiTownPage'
+import TavetaPage from './pages/cities/TavetaPage'
 import BusinessGasPage from './pages/BusinessGasPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
@@ -236,6 +246,16 @@ export default function App() {
         <Route path="/gas-delivery-kangundo" element={<KangundoPage />} />
         <Route path="/gas-delivery-othaya" element={<OthayaPage />} />
         <Route path="/gas-delivery-karatina" element={<KaratniPage />} />
+        <Route path="/gas-delivery-kiambu-town" element={<KiambuTownPage />} />
+        <Route path="/gas-delivery-ngong" element={<NgongPage />} />
+        <Route path="/gas-delivery-kitengela" element={<KitelengelaPage />} />
+        <Route path="/gas-delivery-rongai" element={<RongaiPage />} />
+        <Route path="/gas-delivery-sagana" element={<SaganaPage />} />
+        <Route path="/gas-delivery-muranga-town" element={<MurangaTownPage />} />
+        <Route path="/gas-delivery-nyahururu" element={<NyahururuPage />} />
+        <Route path="/gas-delivery-mtwapa" element={<MtombaPage />} />
+        <Route path="/gas-delivery-kilifi-town" element={<KilifiTownPage />} />
+        <Route path="/gas-delivery-taveta" element={<TavetaPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>
