@@ -20,6 +20,10 @@ const staticUrls = [
   { loc: '/gas-delivery-same-day', priority: '0.8', changefreq: 'monthly' },
   { loc: '/is-mobigas-safe', priority: '0.8', changefreq: 'monthly' },
   { loc: '/gas-delivery-for-business', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-loan-apps-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/cooking-gas-brands-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/how-to-get-gas-on-credit', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/gas-vendor-registration-kenya', priority: '0.8', changefreq: 'monthly' },
 ];
 
 const countyUrls = counties.map(c => ({

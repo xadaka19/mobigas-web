@@ -19,6 +19,10 @@ import GasVendorLoanPage from './pages/GasVendorLoanPage'
 import GasPricesPage from './pages/GasPricesPage'
 import SameDayDeliveryPage from './pages/SameDayDeliveryPage'
 import TrustPage from './pages/TrustPage'
+import GasLoanAppsPage from './pages/GasLoanAppsPage'
+import GasBrandsPage from './pages/GasBrandsPage'
+import HowToGetGasCreditPage from './pages/HowToGetGasCreditPage'
+import VendorRegistrationPage from './pages/VendorRegistrationPage'
 import BusinessGasPage from './pages/BusinessGasPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
@@ -64,6 +68,10 @@ export default function App() {
         <Route path="/gas-delivery-same-day" element={<SameDayDeliveryPage />} />
         <Route path="/is-mobigas-safe" element={<TrustPage />} />
         <Route path="/gas-delivery-for-business" element={<BusinessGasPage />} />
+        <Route path="/gas-loan-apps-kenya" element={<GasLoanAppsPage />} />
+        <Route path="/cooking-gas-brands-kenya" element={<GasBrandsPage />} />
+        <Route path="/how-to-get-gas-on-credit" element={<HowToGetGasCreditPage />} />
+        <Route path="/gas-vendor-registration-kenya" element={<VendorRegistrationPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>
