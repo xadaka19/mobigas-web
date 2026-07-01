@@ -55,6 +55,16 @@ import VoiPage from './pages/cities/VoiPage'
 import MigoriPage from './pages/cities/MigoriPage'
 import HolaPage from './pages/cities/HolaPage'
 import KituiPage from './pages/cities/KituiPage'
+import LodwarPage from './pages/cities/LodwarPage'
+import MaralalPage from './pages/cities/MaralalPage'
+import KitaleePage from './pages/cities/KitaleePage'
+import HombayPage from './pages/cities/HombayPage'
+import KapenguriaPage from './pages/cities/KapenguriaPage'
+import MarsakitPage from './pages/cities/MarsakitPage'
+import WajirPage from './pages/cities/WajirPage'
+import ManderaPage from './pages/cities/ManderaPage'
+import IsioloPage from './pages/cities/IsioloPage'
+import NanyukiPage from './pages/cities/NanyukiPage'
 import BusinessGasPage from './pages/BusinessGasPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
@@ -136,6 +146,16 @@ export default function App() {
         <Route path="/gas-delivery-migori" element={<MigoriPage />} />
         <Route path="/gas-delivery-hola" element={<HolaPage />} />
         <Route path="/gas-delivery-kitui" element={<KituiPage />} />
+        <Route path="/gas-delivery-lodwar" element={<LodwarPage />} />
+        <Route path="/gas-delivery-maralal" element={<MaralalPage />} />
+        <Route path="/gas-delivery-kitale" element={<KitaleePage />} />
+        <Route path="/gas-delivery-homa-bay" element={<HombayPage />} />
+        <Route path="/gas-delivery-kapenguria" element={<KapenguriaPage />} />
+        <Route path="/gas-delivery-marsabit" element={<MarsakitPage />} />
+        <Route path="/gas-delivery-wajir" element={<WajirPage />} />
+        <Route path="/gas-delivery-mandera" element={<ManderaPage />} />
+        <Route path="/gas-delivery-isiolo" element={<IsioloPage />} />
+        <Route path="/gas-delivery-nanyuki" element={<NanyukiPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>
