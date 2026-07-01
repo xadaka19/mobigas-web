@@ -95,6 +95,16 @@ import KilimaniPage from './pages/cities/KilimaniPage'
 import KasaraniPage from './pages/cities/KasaraniPage'
 import EastleighPage from './pages/cities/EastleighPage'
 import KiberaPage from './pages/cities/KiberaPage'
+import UkundaPage from './pages/cities/UkundaPage'
+import MoloPage from './pages/cities/MoloPage'
+import GilgilPage from './pages/cities/GilgilPage'
+import MoyalePage from './pages/cities/MoyalePage'
+import MariakaniPage from './pages/cities/MalindaiPage'
+import WatamPage from './pages/cities/WatamPage'
+import MwingiPage from './pages/cities/MwingiPage'
+import KangundoPage from './pages/cities/KangundoPage'
+import OthayaPage from './pages/cities/OthayaPage'
+import KaratniPage from './pages/cities/KaratniPage'
 import BusinessGasPage from './pages/BusinessGasPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
@@ -216,6 +226,16 @@ export default function App() {
         <Route path="/gas-delivery-kasarani" element={<KasaraniPage />} />
         <Route path="/gas-delivery-eastleigh" element={<EastleighPage />} />
         <Route path="/gas-delivery-kibera" element={<KiberaPage />} />
+        <Route path="/gas-delivery-ukunda" element={<UkundaPage />} />
+        <Route path="/gas-delivery-molo" element={<MoloPage />} />
+        <Route path="/gas-delivery-gilgil" element={<GilgilPage />} />
+        <Route path="/gas-delivery-moyale" element={<MoyalePage />} />
+        <Route path="/gas-delivery-mariakani" element={<MariakaniPage />} />
+        <Route path="/gas-delivery-watamu" element={<WatamPage />} />
+        <Route path="/gas-delivery-mwingi" element={<MwingiPage />} />
+        <Route path="/gas-delivery-kangundo" element={<KangundoPage />} />
+        <Route path="/gas-delivery-othaya" element={<OthayaPage />} />
+        <Route path="/gas-delivery-karatina" element={<KaratniPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>
