@@ -45,6 +45,16 @@ import KakamegaPage from './pages/cities/KakamegaPage'
 import KerichoPage from './pages/cities/KerichoPage'
 import EmbuPage from './pages/cities/EmbuPage'
 import GarissaPage from './pages/cities/GarissaPage'
+import MalindiPage from './pages/cities/MalindiPage'
+import KisiiPage from './pages/cities/KisiiPage'
+import BungomPage from './pages/cities/BungomPage'
+import NaivhashaPage from './pages/cities/NaivhashaPage'
+import KapsabetPage from './pages/cities/KapsabetPage'
+import MumiastPage from './pages/cities/MumiastPage'
+import VoiPage from './pages/cities/VoiPage'
+import MigoriPage from './pages/cities/MigoriPage'
+import HolaPage from './pages/cities/HolaPage'
+import KituiPage from './pages/cities/KituiPage'
 import BusinessGasPage from './pages/BusinessGasPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
@@ -116,6 +126,16 @@ export default function App() {
         <Route path="/gas-delivery-kericho" element={<KerichoPage />} />
         <Route path="/gas-delivery-embu" element={<EmbuPage />} />
         <Route path="/gas-delivery-garissa" element={<GarissaPage />} />
+        <Route path="/gas-delivery-malindi" element={<MalindiPage />} />
+        <Route path="/gas-delivery-kisii" element={<KisiiPage />} />
+        <Route path="/gas-delivery-bungoma" element={<BungomPage />} />
+        <Route path="/gas-delivery-naivasha" element={<NaivhashaPage />} />
+        <Route path="/gas-delivery-kapsabet" element={<KapsabetPage />} />
+        <Route path="/gas-delivery-mumias" element={<MumiastPage />} />
+        <Route path="/gas-delivery-voi" element={<VoiPage />} />
+        <Route path="/gas-delivery-migori" element={<MigoriPage />} />
+        <Route path="/gas-delivery-hola" element={<HolaPage />} />
+        <Route path="/gas-delivery-kitui" element={<KituiPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>
