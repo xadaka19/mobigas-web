@@ -75,6 +75,16 @@ import KerugoyaPage from './pages/cities/KerugoyaPage'
 import BometPage from './pages/cities/BometPage'
 import SiayaPage from './pages/cities/SiayaPage'
 import NyamiraPage from './pages/cities/NyamiraPage'
+import ItenPage from './pages/cities/MoiUniversityPage'
+import RumurtiPage from './pages/cities/RumurtiPage'
+import LiteinPage from './pages/cities/LiteinPage'
+import WebueyePage from './pages/cities/WebueyePage'
+import KanduduPage from './pages/cities/KanduduPage'
+import RuiruPage from './pages/cities/RuiruPage'
+import JujaPage from './pages/cities/JujaPage'
+import KikuyuPage from './pages/cities/KikuyuPage'
+import AtriRiverPage from './pages/cities/AtriRiverPage'
+import LimuruPage from './pages/cities/LimuruPage'
 import BusinessGasPage from './pages/BusinessGasPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
@@ -176,6 +186,16 @@ export default function App() {
         <Route path="/gas-delivery-bomet" element={<BometPage />} />
         <Route path="/gas-delivery-siaya" element={<SiayaPage />} />
         <Route path="/gas-delivery-nyamira" element={<NyamiraPage />} />
+        <Route path="/gas-delivery-iten" element={<ItenPage />} />
+        <Route path="/gas-delivery-rumuruti" element={<RumurtiPage />} />
+        <Route path="/gas-delivery-litein" element={<LiteinPage />} />
+        <Route path="/gas-delivery-webuye" element={<WebueyePage />} />
+        <Route path="/gas-delivery-kandara" element={<KanduduPage />} />
+        <Route path="/gas-delivery-ruiru" element={<RuiruPage />} />
+        <Route path="/gas-delivery-juja" element={<JujaPage />} />
+        <Route path="/gas-delivery-kikuyu" element={<KikuyuPage />} />
+        <Route path="/gas-delivery-athi-river" element={<AtriRiverPage />} />
+        <Route path="/gas-delivery-limuru" element={<LimuruPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>
