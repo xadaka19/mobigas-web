@@ -31,6 +31,10 @@ const staticUrls = [
   { loc: '/gas-delivery-eldoret', priority: '0.9', changefreq: 'weekly' },
   { loc: '/gas-delivery-kiambu', priority: '0.9', changefreq: 'weekly' },
   { loc: '/gas-delivery-thika', priority: '0.9', changefreq: 'weekly' },
+  { loc: '/gas-delivery-app-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/lpg-gas-delivery-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/cooking-gas-emergency-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/mpesa-gas-payment-kenya', priority: '0.8', changefreq: 'monthly' },
 ];
 
 const countyUrls = counties.map(c => ({

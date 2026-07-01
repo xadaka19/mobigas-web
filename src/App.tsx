@@ -30,6 +30,10 @@ import NakuruPage from './pages/cities/NakuruPage'
 import EldoretPage from './pages/cities/EldoretPage'
 import KiambuPage from './pages/cities/KiambuPage'
 import ThikaPage from './pages/cities/ThikaPage'
+import GasDeliveryAppPage from './pages/GasDeliveryAppPage'
+import LpgGasDeliveryPage from './pages/LpgGasDeliveryPage'
+import EmergencyGasPage from './pages/EmergencyGasPage'
+import MpesaGasPage from './pages/MpesaGasPage'
 import BusinessGasPage from './pages/BusinessGasPage'
 import VendorCountyPage from './pages/VendorCountyPage'
 
@@ -86,6 +90,10 @@ export default function App() {
         <Route path="/gas-delivery-eldoret" element={<EldoretPage />} />
         <Route path="/gas-delivery-kiambu" element={<KiambuPage />} />
         <Route path="/gas-delivery-thika" element={<ThikaPage />} />
+        <Route path="/gas-delivery-app-kenya" element={<GasDeliveryAppPage />} />
+        <Route path="/lpg-gas-delivery-kenya" element={<LpgGasDeliveryPage />} />
+        <Route path="/cooking-gas-emergency-kenya" element={<EmergencyGasPage />} />
+        <Route path="/mpesa-gas-payment-kenya" element={<MpesaGasPage />} />
       </Routes>
     </BrowserRouter>
     </HelmetProvider>
