@@ -47,6 +47,10 @@ async function waitForStableTitle(maxMs = 15000) {
   return last; // whatever we have at timeout
 }
 
+const indexPath = join(outDir, 'index.html');
+const pristineIndexHtml = readFileSync(indexPath, 'utf8');
+let homeSnapshot = null;
+
 const failed = [];
 const suspicious = [];
 let homeTitle = '';
@@ -61,12 +65,19 @@ for (const route of routes) {
       });
       const title = await waitForStableTitle();
       const html = await page.content();
-      const file = route === '/' ? join(outDir, 'index.html')
-        : join(outDir, route.replace(/^\//, ''), 'index.html');
-      mkdirSync(dirname(file), { recursive: true });
-      writeFileSync(file, html);
-      if (route === '/') homeTitle = title;
-      else if (!title || (homeTitle && title === homeTitle)) suspicious.push(`${route} (${title ? 'DUPLICATE OF HOMEPAGE TITLE' : 'EMPTY TITLE'})`);
+      if (route === '/') {
+        homeSnapshot = html;
+        homeTitle = title;
+      } else {
+        const file = join(outDir, route.replace(/^\//, ''), 'index.html');
+        mkdirSync(dirname(file), { recursive: true });
+        writeFileSync(file, html);
+        // Keep the SPA fallback shell pristine for routes visited after this one.
+        writeFileSync(indexPath, pristineIndexHtml);
+      }
+      if (route !== '/' && (!title || (homeTitle && title === homeTitle))) {
+        suspicious.push(`${route} (${title ? 'DUPLICATE OF HOMEPAGE TITLE' : 'EMPTY TITLE'})`);
+      }
       console.log('✓', route, '—', title || '(empty)');
       done = true;
     } catch (err) {
@@ -75,6 +86,8 @@ for (const route of routes) {
     }
   }
 }
+
+if (homeSnapshot) writeFileSync(indexPath, homeSnapshot);
 
 console.log(`\nDone: ${routes.length} routes, ${failed.length} failed`);
 if (failed.length) console.log('Failed routes:', failed.join(', '));

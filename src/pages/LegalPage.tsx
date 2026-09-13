@@ -1,9 +1,11 @@
 import { Flame, ArrowLeft } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
-const content: Record<string, { title: string; sections: { heading: string; body: string }[] }> = {
+const content: Record<string, { title: string; description: string; sections: { heading: string; body: string }[] }> = {
   terms: {
     title: 'Terms of Service',
+    description: 'Read the MobiGas Terms of Service — how gas credit, delivery, guarantors, and account rules work for customers using MobiGas in Kenya.',
     sections: [
       { heading: '1. About MobiGas', body: 'MobiGas is a digital marketplace platform that connects customers with local gas vendors and regulated financial institutions for gas purchases on credit. MobiGas does not issue credit, lend money, or hold customer funds.' },
       { heading: '2. Gas Credit', body: 'Credit is provided exclusively by our partner banks and SACCOs, not by MobiGas. You repay the bank directly within the agreed period. MobiGas earns a referral fee from the bank for connecting you to their services.' },
@@ -20,6 +22,7 @@ const content: Record<string, { title: string; sections: { heading: string; body
   },
   privacy: {
     title: 'Privacy Policy',
+    description: 'MobiGas Privacy Policy — what personal data we collect, how it is used and shared with partner banks and vendors, and your rights under the Kenya Data Protection Act.',
     sections: [
       { heading: '1. Data We Collect', body: 'We collect: Personal identification data (name, phone number, email, National ID number); Location data (GPS coordinates for vendor matching and delivery); Biometric data (selfie photograph for identity verification); Financial data (credit history shared by partner banks, repayment records); Device data (FCM token for push notifications, device type); Usage data (app interactions, order history).' },
       { heading: '2. How We Use Your Data', body: 'We use your data to: Create and manage your MobiGas account; Match you with nearby verified gas vendors; Share your KYC data with partner banks for credit assessment; Send order status and payment notifications; Verify your identity via selfie photograph; Improve our platform and services; Comply with legal and regulatory obligations.' },
@@ -34,6 +37,7 @@ const content: Record<string, { title: string; sections: { heading: string; body
   },
   data: {
     title: 'Data Protection Policy',
+    description: 'MobiGas Data Protection Policy — our legal basis for processing data, data minimization, international transfers, and breach procedures under the KDPA and GDPR.',
     sections: [
       { heading: 'Our Commitment', body: 'MobiGas is committed to protecting the personal data of all users in accordance with the Kenya Data Protection Act 2019 (KDPA) and the General Data Protection Regulation (GDPR) principles.' },
       { heading: 'Legal Basis for Processing', body: 'We process personal data under the following legal bases: Contractual necessity (to provide our gas delivery and credit facilitation services); Legitimate interests (to improve our platform and prevent fraud); Legal obligation (to comply with Kenyan financial and data protection regulations); Consent (for optional features such as marketing communications).' },
@@ -45,6 +49,7 @@ const content: Record<string, { title: string; sections: { heading: string; body
   },
   odpc: {
     title: 'ODPC Compliance',
+    description: 'MobiGas ODPC Compliance — our registration with the Office of the Data Protection Commissioner, obligations as a data processor, and your rights under Kenyan law.',
     sections: [
       { heading: 'Registration', body: 'MobiGas is registered with the Office of the Data Protection Commissioner (ODPC) of Kenya as a Data Controller and Data Processor under the Kenya Data Protection Act 2019.' },
       { heading: 'Our Obligations', body: 'As a registered data processor, MobiGas: Processes personal data only for specified, explicit, and legitimate purposes; Ensures data is accurate and kept up to date; Implements appropriate technical and organizational security measures; Maintains records of all data processing activities; Conducts regular data protection impact assessments.' },
@@ -61,6 +66,10 @@ export default function LegalPage({ type }: { type: string }) {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>{`${page.title} | MobiGas`}</title>
+        <meta name="description" content={page.description} />
+      </Helmet>
       {/* Header */}
       <div className="bg-[#0D1B40] py-6 px-6">
         <div className="max-w-4xl mx-auto flex items-center gap-4">
