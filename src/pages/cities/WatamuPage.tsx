@@ -1,5 +1,5 @@
 import CityPageTemplate from './CityPageTemplate'
-export default function WatamPage() {
+export default function WatamuPage() {
   return (
     <CityPageTemplate
       city="Watamu"

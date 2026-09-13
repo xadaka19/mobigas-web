@@ -1,5 +1,5 @@
 import CityPageTemplate from './CityPageTemplate'
-export default function MtombaPage() {
+export default function MtwapaPage() {
   return (
     <CityPageTemplate
       city="Mtwapa"

@@ -1,5 +1,5 @@
 import CityPageTemplate from './CityPageTemplate'
-export default function MarsakitPage() {
+export default function MarsabitPage() {
   return (
     <CityPageTemplate
       city="Marsabit"

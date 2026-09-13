@@ -1,5 +1,5 @@
 import CityPageTemplate from './CityPageTemplate'
-export default function KitelengelaPage() {
+export default function KitengelaPage() {
   return (
     <CityPageTemplate
       city="Kitengela"

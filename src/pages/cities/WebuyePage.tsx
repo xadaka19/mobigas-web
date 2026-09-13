@@ -1,5 +1,5 @@
 import CityPageTemplate from './CityPageTemplate'
-export default function WebueyePage() {
+export default function WebuyePage() {
   return (
     <CityPageTemplate
       city="Webuye"

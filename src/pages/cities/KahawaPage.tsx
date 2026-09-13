@@ -1,5 +1,5 @@
 import CityPageTemplate from './CityPageTemplate'
-export default function KahawePage() {
+export default function KahawaPage() {
   return (
     <CityPageTemplate
       city="Kahawa"

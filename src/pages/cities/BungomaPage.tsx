@@ -1,5 +1,5 @@
 import CityPageTemplate from './CityPageTemplate'
-export default function BungomPage() {
+export default function BungomaPage() {
   return (
     <CityPageTemplate
       city="Bungoma"

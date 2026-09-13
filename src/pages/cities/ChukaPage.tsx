@@ -1,5 +1,5 @@
 import CityPageTemplate from './CityPageTemplate'
-export default function ChukkaPage() {
+export default function ChukaPage() {
   return (
     <CityPageTemplate
       city="Chuka"

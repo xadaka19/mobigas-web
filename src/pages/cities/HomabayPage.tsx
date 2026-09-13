@@ -1,5 +1,5 @@
 import CityPageTemplate from './CityPageTemplate'
-export default function HombayPage() {
+export default function HomabayPage() {
   return (
     <CityPageTemplate
       city="Homa Bay"

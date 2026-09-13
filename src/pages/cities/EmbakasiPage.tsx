@@ -1,5 +1,5 @@
 import CityPageTemplate from './CityPageTemplate'
-export default function EmbakasPage() {
+export default function EmbakasiPage() {
   return (
     <CityPageTemplate
       city="Embakasi"

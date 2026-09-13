@@ -1,5 +1,5 @@
 import CityPageTemplate from './CityPageTemplate'
-export default function MumiastPage() {
+export default function MumiasPage() {
   return (
     <CityPageTemplate
       city="Mumias"

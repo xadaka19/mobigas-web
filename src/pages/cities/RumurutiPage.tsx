@@ -1,5 +1,5 @@
 import CityPageTemplate from './CityPageTemplate'
-export default function RumurtiPage() {
+export default function RumurutiPage() {
   return (
     <CityPageTemplate
       city="Rumuruti"
