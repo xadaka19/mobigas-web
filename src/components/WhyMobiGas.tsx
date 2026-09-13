@@ -1,43 +1,27 @@
 import { Zap, Shield, MapPin, Star, Smartphone, Building2 } from 'lucide-react'
+import { country } from '../config/countries'
 
-const features = [
-  {
-    icon: Zap,
-    title: 'Instant credit decision',
-    desc: 'No waiting days for loan approval. Our partner bank runs an instant CRB check and sets your limit in seconds.',
-    color: 'text-yellow-500 bg-yellow-50',
-  },
-  {
-    icon: Shield,
-    title: 'Zero risk to vendors',
-    desc: 'Vendors get paid instantly by the bank on PIN confirmation. They never extend credit themselves.',
-    color: 'text-green-500 bg-green-50',
-  },
-  {
-    icon: MapPin,
-    title: 'Hyperlocal delivery',
-    desc: 'Only verified vendors within 8km of you appear in the app. Fast, reliable, nearby.',
-    color: 'text-blue-500 bg-blue-50',
-  },
-  {
-    icon: Star,
-    title: 'Verified vendors only',
-    desc: 'Every vendor is verified by our team before going live. Rated by customers after every delivery.',
-    color: 'text-orange-500 bg-orange-50',
-  },
-  {
-    icon: Smartphone,
-    title: 'M-Pesa repayment',
-    desc: 'Repay anytime within 30 days via M-Pesa. No bank account needed. No queues.',
-    color: 'text-purple-500 bg-purple-50',
-  },
-  {
-    icon: Building2,
-    title: 'Bank-backed credit',
-    desc: 'Credit is provided by regulated partner banks and SACCOs — not MobiGas. Safe, compliant, transparent.',
-    color: 'text-indigo-500 bg-indigo-50',
-  },
+const demonym = { KE: 'Kenyan', TZ: 'Tanzanian', UG: 'Ugandan' }[country.code]
+
+const creditFeatures = [
+  { icon: Zap, title: 'Instant credit decision', desc: 'No waiting days for loan approval. Our partner bank runs an instant CRB check and sets your limit in seconds.', color: 'text-yellow-500 bg-yellow-50' },
+  { icon: Shield, title: 'Zero risk to vendors', desc: 'Vendors get paid instantly by the bank on PIN confirmation. They never extend credit themselves.', color: 'text-green-500 bg-green-50' },
+  { icon: MapPin, title: 'Hyperlocal delivery', desc: 'Only verified vendors within 8km of you appear in the app. Fast, reliable, nearby.', color: 'text-blue-500 bg-blue-50' },
+  { icon: Star, title: 'Verified vendors only', desc: 'Every vendor is verified by our team before going live. Rated by customers after every delivery.', color: 'text-orange-500 bg-orange-50' },
+  { icon: Smartphone, title: 'M-Pesa repayment', desc: 'Repay anytime within 30 days via M-Pesa. No bank account needed. No queues.', color: 'text-purple-500 bg-purple-50' },
+  { icon: Building2, title: 'Bank-backed credit', desc: 'Credit is provided by regulated partner banks and SACCOs — not MobiGas. Safe, compliant, transparent.', color: 'text-indigo-500 bg-indigo-50' },
 ]
+
+const cashFeatures = [
+  { icon: Zap, title: 'Fast delivery', desc: 'Verified vendors within 8km deliver to your door in 10–40 minutes. No waiting around.', color: 'text-yellow-500 bg-yellow-50' },
+  { icon: Shield, title: 'Instant vendor payment', desc: 'Vendors get paid the moment you confirm delivery. No delays, no disputes.', color: 'text-green-500 bg-green-50' },
+  { icon: MapPin, title: 'Hyperlocal delivery', desc: 'Only verified vendors within 8km of you appear in the app. Fast, reliable, nearby.', color: 'text-blue-500 bg-blue-50' },
+  { icon: Star, title: 'Verified vendors only', desc: 'Every vendor is verified by our team before going live. Rated by customers after every delivery.', color: 'text-orange-500 bg-orange-50' },
+  { icon: Smartphone, title: 'Pay on delivery', desc: `Pay with cash or ${country.payment} when your gas arrives. No upfront payment needed.`, color: 'text-purple-500 bg-purple-50' },
+  { icon: Building2, title: 'Transparent pricing', desc: 'Compare vendor prices before you order. No hidden fees, no surprises.', color: 'text-indigo-500 bg-indigo-50' },
+]
+
+const features = country.showCredit ? creditFeatures : cashFeatures
 
 export default function WhyMobiGas() {
   return (
@@ -48,10 +32,12 @@ export default function WhyMobiGas() {
             Why choose us
           </div>
           <h2 className="text-4xl font-black text-[#0D1B40] mb-4">
-            Built for Kenyan households
+            Built for {demonym} households
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            Running out of gas mid-cooking is an emergency. MobiGas solves it — instantly, on credit.
+            {country.showCredit
+              ? 'Running out of gas mid-cooking is an emergency. MobiGas solves it — instantly, on credit.'
+              : 'Running out of gas mid-cooking is an emergency. MobiGas solves it — fast, and you pay on delivery.'}
           </p>
         </div>
 

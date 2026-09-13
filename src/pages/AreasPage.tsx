@@ -1,7 +1,8 @@
 import { Flame, ArrowLeft, MapPin } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
 import { useNavigate, Link } from 'react-router-dom'
-import { kenyaCounties } from '../data/kenyaCounties'
+import { regions, regionWord } from '../data/regions'
+import { country } from '../config/countries'
 
 export default function AreasPage() {
   const navigate = useNavigate()
@@ -9,8 +10,8 @@ export default function AreasPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Cooking Gas Delivery Near Me | MobiGas Coverage Areas Kenya</title>
-        <meta name="description" content="Find MobiGas gas delivery coverage across all 47 counties in Kenya. Order LPG cooking gas on credit and get it delivered to your door in 10-40 minutes." />
+        <title>{`Cooking Gas Delivery Near Me | MobiGas Coverage Areas ${country.name}`}</title>
+        <meta name="description" content={`Find MobiGas gas delivery coverage across ${country.name}. Order LPG cooking gas and get it delivered to your door in 10-40 minutes.`} />
       </Helmet>
       <div className="bg-[#0D1B40] py-6 px-6">
         <div className="max-w-4xl mx-auto flex items-center gap-4">
@@ -32,22 +33,22 @@ export default function AreasPage() {
           <span className="text-sm font-semibold text-[#F97316] uppercase tracking-wide">Coverage Areas</span>
         </div>
         <h1 className="text-4xl font-black text-[#0D1B40] mb-4">
-          Gas Delivery Across Kenya
+          Gas Delivery Across {country.name}
         </h1>
         <p className="text-gray-500 text-lg mb-12 max-w-2xl">
           MobiGas connects you with verified gas vendors within 8km of your location.
-          Select your county below to see specific areas we serve.
+          Select your {regionWord.toLowerCase()} below to see specific areas we serve.
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          {kenyaCounties.map(county => (
+          {regions.map(region => (
             <Link
-              key={county.slug}
-              to={`/areas/${county.slug}`}
+              key={region.slug}
+              to={`/areas/${region.slug}`}
               className="bg-white rounded-xl border border-gray-100 px-4 py-3 hover:border-[#F97316] hover:shadow-sm transition-all flex items-center gap-2"
             >
               <MapPin size={14} className="text-[#F97316] flex-shrink-0" />
-              <span className="text-sm font-medium text-[#0D1B40]">{county.name}</span>
+              <span className="text-sm font-medium text-[#0D1B40]">{region.name}</span>
             </Link>
           ))}
         </div>

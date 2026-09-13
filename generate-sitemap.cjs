@@ -1,11 +1,43 @@
 const fs = require('fs');
 const path = require('path');
 
-const counties = require('./sitemap-counties.json');
+const COUNTRY = process.env.VITE_COUNTRY || 'KE';
 
-const baseUrl = 'https://mobigas.co.ke';
+// ---- Per-country config ----
+const COUNTRIES = {
+  KE: {
+    baseUrl: 'https://mobigas.co.ke',
+    showCredit: true,
+    cities: [], // KE uses its own hand-written city routes below
+  },
+  TZ: {
+    baseUrl: 'https://mobigas.co.tz',
+    showCredit: false,
+    cities: ['dar-es-salaam', 'mwanza', 'arusha', 'dodoma', 'mbeya', 'zanzibar'],
+  },
+  UG: {
+    baseUrl: 'https://mobigas.co.ug',
+    showCredit: false,
+    cities: ['kampala', 'entebbe', 'jinja', 'gulu', 'mbarara'],
+  },
+};
 
-const staticUrls = [
+const cfg = COUNTRIES[COUNTRY] || COUNTRIES.KE;
+const baseUrl = cfg.baseUrl;
+
+// ---- Credit-only routes: included for KE, dropped for cash-only countries ----
+const creditRoutes = [
+  { loc: '/buy-gas-on-credit', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/gas-vendor-loan', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/gas-loan-apps-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/how-to-get-gas-on-credit', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/gas-on-credit-no-deposit', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/gas-credit-limit-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/mobigas-partner-banks', priority: '0.7', changefreq: 'monthly' },
+];
+
+// ---- Core routes shared by every country ----
+const coreRoutes = [
   { loc: '/', priority: '1.0', changefreq: 'weekly' },
   { loc: '/terms', priority: '0.5', changefreq: 'monthly' },
   { loc: '/privacy', priority: '0.5', changefreq: 'monthly' },
@@ -13,17 +45,33 @@ const staticUrls = [
   { loc: '/odpc', priority: '0.5', changefreq: 'monthly' },
   { loc: '/faq', priority: '0.8', changefreq: 'monthly' },
   { loc: '/areas', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-delivery', priority: '0.8', changefreq: 'monthly' },
   { loc: '/vendors', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/buy-gas-on-credit', priority: '0.9', changefreq: 'monthly' },
-  { loc: '/gas-vendor-loan', priority: '0.9', changefreq: 'monthly' },
   { loc: '/cooking-gas-prices-kenya', priority: '0.8', changefreq: 'monthly' },
   { loc: '/gas-delivery-same-day', priority: '0.8', changefreq: 'monthly' },
   { loc: '/is-mobigas-safe', priority: '0.8', changefreq: 'monthly' },
   { loc: '/gas-delivery-for-business', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/gas-loan-apps-kenya', priority: '0.8', changefreq: 'monthly' },
   { loc: '/cooking-gas-brands-kenya', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/how-to-get-gas-on-credit', priority: '0.9', changefreq: 'monthly' },
   { loc: '/gas-vendor-registration-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-delivery-app-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/lpg-gas-delivery-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/cooking-gas-emergency-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/mpesa-gas-payment-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/how-mobigas-works', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/cooking-gas-for-students-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/affordable-gas-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-cylinder-swap-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-for-landlords-kenya', priority: '0.7', changefreq: 'monthly' },
+  { loc: '/mobigas-referral', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/lpg-cylinder-sizes-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/gas-vendor-earn-kenya', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/cooking-gas-safety-kenya', priority: '0.7', changefreq: 'monthly' },
+  { loc: '/order-gas-cash-on-delivery', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/compare-gas-vendors-kenya', priority: '0.8', changefreq: 'monthly' },
+];
+
+// ---- Kenya hand-written city routes (unchanged from original) ----
+const kenyaCityRoutes = [
   { loc: '/gas-delivery-nairobi', priority: '0.9', changefreq: 'weekly' },
   { loc: '/gas-delivery-mombasa', priority: '0.9', changefreq: 'weekly' },
   { loc: '/gas-delivery-kisumu', priority: '0.9', changefreq: 'weekly' },
@@ -31,14 +79,6 @@ const staticUrls = [
   { loc: '/gas-delivery-eldoret', priority: '0.9', changefreq: 'weekly' },
   { loc: '/gas-delivery-kiambu', priority: '0.9', changefreq: 'weekly' },
   { loc: '/gas-delivery-thika', priority: '0.9', changefreq: 'weekly' },
-  { loc: '/gas-delivery-app-kenya', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/lpg-gas-delivery-kenya', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/cooking-gas-emergency-kenya', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/mpesa-gas-payment-kenya', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/gas-on-credit-no-deposit', priority: '0.9', changefreq: 'monthly' },
-  { loc: '/how-mobigas-works', priority: '0.9', changefreq: 'monthly' },
-  { loc: '/cooking-gas-for-students-kenya', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/affordable-gas-kenya', priority: '0.8', changefreq: 'monthly' },
   { loc: '/gas-delivery-machakos', priority: '0.8', changefreq: 'weekly' },
   { loc: '/gas-delivery-meru', priority: '0.8', changefreq: 'weekly' },
   { loc: '/gas-delivery-nyeri', priority: '0.8', changefreq: 'weekly' },
@@ -116,33 +156,51 @@ const staticUrls = [
   { loc: '/gas-delivery-mtwapa', priority: '0.8', changefreq: 'weekly' },
   { loc: '/gas-delivery-kilifi-town', priority: '0.7', changefreq: 'weekly' },
   { loc: '/gas-delivery-taveta', priority: '0.7', changefreq: 'weekly' },
-  { loc: '/gas-cylinder-swap-kenya', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/gas-for-landlords-kenya', priority: '0.7', changefreq: 'monthly' },
-  { loc: '/mobigas-referral', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/gas-credit-limit-kenya', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/lpg-cylinder-sizes-kenya', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/gas-vendor-earn-kenya', priority: '0.8', changefreq: 'monthly' },
-  { loc: '/cooking-gas-safety-kenya', priority: '0.7', changefreq: 'monthly' },
-  { loc: '/mobigas-partner-banks', priority: '0.7', changefreq: 'monthly' },
 ];
 
-const countyUrls = counties.map(c => ({
-  loc: `/areas/${c.slug}`,
-  priority: '0.7',
-  changefreq: 'monthly',
-}));
+// ---- Assemble routes for the active country ----
+let staticUrls = [...coreRoutes];
+if (cfg.showCredit) {
+  staticUrls = staticUrls.concat(creditRoutes);
+}
 
-const vendorCountyUrls = counties.map(c => ({
-  loc: `/vendors/${c.slug}`,
-  priority: '0.7',
-  changefreq: 'monthly',
-}));
+// City URLs
+let cityUrls = [];
+if (COUNTRY === 'KE') {
+  cityUrls = kenyaCityRoutes;
+} else {
+  // TZ/UG: point launch cities at the data-driven /areas/<slug> page
+  cityUrls = cfg.cities.map(slug => ({
+    loc: `/areas/${slug}`,
+    priority: '0.9',
+    changefreq: 'weekly',
+  }));
+}
 
-const allUrls = [...staticUrls, ...countyUrls, ...vendorCountyUrls];
+// Area/vendor hub pages for TZ/UG launch cities (KE uses its counties file)
+let areaHubUrls = [];
+let vendorHubUrls = [];
+if (COUNTRY === 'KE') {
+  const counties = require('./sitemap-counties.json');
+  areaHubUrls = counties.map(c => ({ loc: `/areas/${c.slug}`, priority: '0.7', changefreq: 'monthly' }));
+  vendorHubUrls = counties.map(c => ({ loc: `/vendors/${c.slug}`, priority: '0.7', changefreq: 'monthly' }));
+} else {
+  vendorHubUrls = cfg.cities.map(slug => ({ loc: `/vendors/${slug}`, priority: '0.7', changefreq: 'monthly' }));
+}
+
+const allUrls = [...staticUrls, ...cityUrls, ...areaHubUrls, ...vendorHubUrls];
+
+// De-dupe by loc (KE cityUrls + areaHubUrls could overlap on slugs)
+const seen = new Set();
+const uniqueUrls = allUrls.filter(u => {
+  if (seen.has(u.loc)) return false;
+  seen.add(u.loc);
+  return true;
+});
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${allUrls.map(u => `  <url>
+${uniqueUrls.map(u => `  <url>
     <loc>${baseUrl}${u.loc}</loc>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
@@ -151,4 +209,4 @@ ${allUrls.map(u => `  <url>
 `;
 
 fs.writeFileSync(path.join(__dirname, 'public', 'sitemap.xml'), xml);
-console.log(`Sitemap generated with ${allUrls.length} URLs (${countyUrls.length} county pages)`);
+console.log(`[${COUNTRY}] Sitemap generated with ${uniqueUrls.length} URLs -> ${baseUrl}`);

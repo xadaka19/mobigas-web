@@ -1,0 +1,422 @@
+[
+  {
+    "slug": "nairobi",
+    "name": "Nairobi",
+    "path": "/gas-delivery-nairobi"
+  },
+  {
+    "slug": "mombasa",
+    "name": "Mombasa",
+    "path": "/gas-delivery-mombasa"
+  },
+  {
+    "slug": "kisumu",
+    "name": "Kisumu",
+    "path": "/gas-delivery-kisumu"
+  },
+  {
+    "slug": "nakuru",
+    "name": "Nakuru",
+    "path": "/gas-delivery-nakuru"
+  },
+  {
+    "slug": "eldoret",
+    "name": "Eldoret",
+    "path": "/gas-delivery-eldoret"
+  },
+  {
+    "slug": "kiambu",
+    "name": "Kiambu",
+    "path": "/gas-delivery-kiambu"
+  },
+  {
+    "slug": "thika",
+    "name": "Thika",
+    "path": "/gas-delivery-thika"
+  },
+  {
+    "slug": "machakos",
+    "name": "Machakos",
+    "path": "/gas-delivery-machakos"
+  },
+  {
+    "slug": "meru",
+    "name": "Meru",
+    "path": "/gas-delivery-meru"
+  },
+  {
+    "slug": "nyeri",
+    "name": "Nyeri",
+    "path": "/gas-delivery-nyeri"
+  },
+  {
+    "slug": "kakamega",
+    "name": "Kakamega",
+    "path": "/gas-delivery-kakamega"
+  },
+  {
+    "slug": "kericho",
+    "name": "Kericho",
+    "path": "/gas-delivery-kericho"
+  },
+  {
+    "slug": "embu",
+    "name": "Embu",
+    "path": "/gas-delivery-embu"
+  },
+  {
+    "slug": "garissa",
+    "name": "Garissa",
+    "path": "/gas-delivery-garissa"
+  },
+  {
+    "slug": "malindi",
+    "name": "Malindi",
+    "path": "/gas-delivery-malindi"
+  },
+  {
+    "slug": "kisii",
+    "name": "Kisii",
+    "path": "/gas-delivery-kisii"
+  },
+  {
+    "slug": "bungoma",
+    "name": "Bungoma",
+    "path": "/gas-delivery-bungoma"
+  },
+  {
+    "slug": "naivasha",
+    "name": "Naivasha",
+    "path": "/gas-delivery-naivasha"
+  },
+  {
+    "slug": "kapsabet",
+    "name": "Kapsabet",
+    "path": "/gas-delivery-kapsabet"
+  },
+  {
+    "slug": "mumias",
+    "name": "Mumias",
+    "path": "/gas-delivery-mumias"
+  },
+  {
+    "slug": "voi",
+    "name": "Voi",
+    "path": "/gas-delivery-voi"
+  },
+  {
+    "slug": "migori",
+    "name": "Migori",
+    "path": "/gas-delivery-migori"
+  },
+  {
+    "slug": "hola",
+    "name": "Hola",
+    "path": "/gas-delivery-hola"
+  },
+  {
+    "slug": "kitui",
+    "name": "Kitui",
+    "path": "/gas-delivery-kitui"
+  },
+  {
+    "slug": "lodwar",
+    "name": "Lodwar",
+    "path": "/gas-delivery-lodwar"
+  },
+  {
+    "slug": "maralal",
+    "name": "Maralal",
+    "path": "/gas-delivery-maralal"
+  },
+  {
+    "slug": "kitale",
+    "name": "Kitale",
+    "path": "/gas-delivery-kitale"
+  },
+  {
+    "slug": "homa-bay",
+    "name": "Homa Bay",
+    "path": "/gas-delivery-homa-bay"
+  },
+  {
+    "slug": "kapenguria",
+    "name": "Kapenguria",
+    "path": "/gas-delivery-kapenguria"
+  },
+  {
+    "slug": "marsabit",
+    "name": "Marsabit",
+    "path": "/gas-delivery-marsabit"
+  },
+  {
+    "slug": "wajir",
+    "name": "Wajir",
+    "path": "/gas-delivery-wajir"
+  },
+  {
+    "slug": "mandera",
+    "name": "Mandera",
+    "path": "/gas-delivery-mandera"
+  },
+  {
+    "slug": "isiolo",
+    "name": "Isiolo",
+    "path": "/gas-delivery-isiolo"
+  },
+  {
+    "slug": "nanyuki",
+    "name": "Nanyuki",
+    "path": "/gas-delivery-nanyuki"
+  },
+  {
+    "slug": "narok",
+    "name": "Narok",
+    "path": "/gas-delivery-narok"
+  },
+  {
+    "slug": "kabarnet",
+    "name": "Kabarnet",
+    "path": "/gas-delivery-kabarnet"
+  },
+  {
+    "slug": "lamu",
+    "name": "Lamu",
+    "path": "/gas-delivery-lamu"
+  },
+  {
+    "slug": "chuka",
+    "name": "Chuka",
+    "path": "/gas-delivery-chuka"
+  },
+  {
+    "slug": "wote",
+    "name": "Wote",
+    "path": "/gas-delivery-wote"
+  },
+  {
+    "slug": "ol-kalou",
+    "name": "Ol Kalou",
+    "path": "/gas-delivery-ol-kalou"
+  },
+  {
+    "slug": "kerugoya",
+    "name": "Kerugoya",
+    "path": "/gas-delivery-kerugoya"
+  },
+  {
+    "slug": "bomet",
+    "name": "Bomet",
+    "path": "/gas-delivery-bomet"
+  },
+  {
+    "slug": "siaya",
+    "name": "Siaya",
+    "path": "/gas-delivery-siaya"
+  },
+  {
+    "slug": "nyamira",
+    "name": "Nyamira",
+    "path": "/gas-delivery-nyamira"
+  },
+  {
+    "slug": "iten",
+    "name": "Iten",
+    "path": "/gas-delivery-iten"
+  },
+  {
+    "slug": "rumuruti",
+    "name": "Rumuruti",
+    "path": "/gas-delivery-rumuruti"
+  },
+  {
+    "slug": "litein",
+    "name": "Litein",
+    "path": "/gas-delivery-litein"
+  },
+  {
+    "slug": "webuye",
+    "name": "Webuye",
+    "path": "/gas-delivery-webuye"
+  },
+  {
+    "slug": "kandara",
+    "name": "Kandara",
+    "path": "/gas-delivery-kandara"
+  },
+  {
+    "slug": "ruiru",
+    "name": "Ruiru",
+    "path": "/gas-delivery-ruiru"
+  },
+  {
+    "slug": "juja",
+    "name": "Juja",
+    "path": "/gas-delivery-juja"
+  },
+  {
+    "slug": "kikuyu",
+    "name": "Kikuyu",
+    "path": "/gas-delivery-kikuyu"
+  },
+  {
+    "slug": "athi-river",
+    "name": "Athi River",
+    "path": "/gas-delivery-athi-river"
+  },
+  {
+    "slug": "limuru",
+    "name": "Limuru",
+    "path": "/gas-delivery-limuru"
+  },
+  {
+    "slug": "kahawa",
+    "name": "Kahawa",
+    "path": "/gas-delivery-kahawa"
+  },
+  {
+    "slug": "embakasi",
+    "name": "Embakasi",
+    "path": "/gas-delivery-embakasi"
+  },
+  {
+    "slug": "kabete",
+    "name": "Kabete",
+    "path": "/gas-delivery-kabete"
+  },
+  {
+    "slug": "dagoretti",
+    "name": "Dagoretti",
+    "path": "/gas-delivery-dagoretti"
+  },
+  {
+    "slug": "langata",
+    "name": "Langata",
+    "path": "/gas-delivery-langata"
+  },
+  {
+    "slug": "westlands",
+    "name": "Westlands",
+    "path": "/gas-delivery-westlands"
+  },
+  {
+    "slug": "kilimani",
+    "name": "Kilimani",
+    "path": "/gas-delivery-kilimani"
+  },
+  {
+    "slug": "kasarani",
+    "name": "Kasarani",
+    "path": "/gas-delivery-kasarani"
+  },
+  {
+    "slug": "eastleigh",
+    "name": "Eastleigh",
+    "path": "/gas-delivery-eastleigh"
+  },
+  {
+    "slug": "kibera",
+    "name": "Kibera",
+    "path": "/gas-delivery-kibera"
+  },
+  {
+    "slug": "ukunda",
+    "name": "Ukunda",
+    "path": "/gas-delivery-ukunda"
+  },
+  {
+    "slug": "molo",
+    "name": "Molo",
+    "path": "/gas-delivery-molo"
+  },
+  {
+    "slug": "gilgil",
+    "name": "Gilgil",
+    "path": "/gas-delivery-gilgil"
+  },
+  {
+    "slug": "moyale",
+    "name": "Moyale",
+    "path": "/gas-delivery-moyale"
+  },
+  {
+    "slug": "mariakani",
+    "name": "Mariakani",
+    "path": "/gas-delivery-mariakani"
+  },
+  {
+    "slug": "watamu",
+    "name": "Watamu",
+    "path": "/gas-delivery-watamu"
+  },
+  {
+    "slug": "mwingi",
+    "name": "Mwingi",
+    "path": "/gas-delivery-mwingi"
+  },
+  {
+    "slug": "kangundo",
+    "name": "Kangundo",
+    "path": "/gas-delivery-kangundo"
+  },
+  {
+    "slug": "othaya",
+    "name": "Othaya",
+    "path": "/gas-delivery-othaya"
+  },
+  {
+    "slug": "karatina",
+    "name": "Karatina",
+    "path": "/gas-delivery-karatina"
+  },
+  {
+    "slug": "kiambu-town",
+    "name": "Kiambu Town",
+    "path": "/gas-delivery-kiambu-town"
+  },
+  {
+    "slug": "ngong",
+    "name": "Ngong",
+    "path": "/gas-delivery-ngong"
+  },
+  {
+    "slug": "kitengela",
+    "name": "Kitengela",
+    "path": "/gas-delivery-kitengela"
+  },
+  {
+    "slug": "rongai",
+    "name": "Rongai",
+    "path": "/gas-delivery-rongai"
+  },
+  {
+    "slug": "sagana",
+    "name": "Sagana",
+    "path": "/gas-delivery-sagana"
+  },
+  {
+    "slug": "muranga-town",
+    "name": "Muranga Town",
+    "path": "/gas-delivery-muranga-town"
+  },
+  {
+    "slug": "nyahururu",
+    "name": "Nyahururu",
+    "path": "/gas-delivery-nyahururu"
+  },
+  {
+    "slug": "mtwapa",
+    "name": "Mtwapa",
+    "path": "/gas-delivery-mtwapa"
+  },
+  {
+    "slug": "kilifi-town",
+    "name": "Kilifi Town",
+    "path": "/gas-delivery-kilifi-town"
+  },
+  {
+    "slug": "taveta",
+    "name": "Taveta",
+    "path": "/gas-delivery-taveta"
+  }
+]

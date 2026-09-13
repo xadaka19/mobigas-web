@@ -1,10 +1,21 @@
+import { country } from '../config/countries'
+
+const creditStats = [
+  { value: '10–40', unit: 'min', label: 'Average delivery time' },
+  { value: '30', unit: 'days', label: 'Flexible repayment' },
+  { value: '8km', unit: '', label: 'Delivery radius' },
+  { value: '0', unit: '', label: 'Capital risk to vendors' },
+]
+
+const cashStats = [
+  { value: '10–40', unit: 'min', label: 'Average delivery time' },
+  { value: '100%', unit: '', label: 'Pay on delivery' },
+  { value: '8km', unit: '', label: 'Delivery radius' },
+  { value: '24hr', unit: '', label: 'Vendor verification' },
+]
+
 export default function Stats() {
-  const stats = [
-    { value: '10–40', unit: 'min', label: 'Average delivery time' },
-    { value: '30', unit: 'days', label: 'Flexible repayment' },
-    { value: '8km', unit: '', label: 'Delivery radius' },
-    { value: '0', unit: '', label: 'Capital risk to vendors' },
-  ]
+  const stats = country.showCredit ? creditStats : cashStats
 
   return (
     <section className="bg-[#F97316] py-12">

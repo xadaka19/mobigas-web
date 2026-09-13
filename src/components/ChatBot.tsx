@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { MessageCircle, X, Send, Flame, UserRound, CheckCircle } from 'lucide-react'
 import { faqData, defaultAnswer } from '../data/chatbotFaq'
+import { country } from '../config/countries'
 import { db } from '../firebase'
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
 
@@ -21,14 +22,15 @@ function findAnswer(input: string): string {
   return defaultAnswer
 }
 
+const greeting = country.showCredit
+  ? "Hi! 👋 I'm the MobiGas assistant. Ask me about ordering gas, becoming a vendor, credit, repayment, or anything else!"
+  : "Hi! 👋 I'm the MobiGas assistant. Ask me about ordering gas, paying on delivery, becoming a vendor, or anything else!"
+
 export default function ChatBot() {
   const [open, setOpen] = useState(false)
   const [mode, setMode] = useState<Mode>('chat')
   const [messages, setMessages] = useState<Message[]>([
-    {
-      sender: 'bot',
-      text: "Hi! 👋 I'm the MobiGas assistant. Ask me about ordering gas, becoming a vendor, credit, repayment, or anything else!",
-    },
+    { sender: 'bot', text: greeting },
   ])
   const [input, setInput] = useState('')
   const [ticketName, setTicketName] = useState('')
@@ -68,12 +70,13 @@ export default function ChatBot() {
         message: ticketMessage.trim(),
         status: 'open',
         source: 'website_chat',
+        countryCode: country.code,
         createdAt: serverTimestamp(),
       })
       setMode('ticketSent')
     } catch (e) {
       console.error('Failed to submit ticket', e)
-      alert('Something went wrong sending your message. Please email hello@mobigas.co.ke directly.')
+      alert(`Something went wrong sending your message. Please email ${country.email} directly.`)
     }
     setSubmitting(false)
   }

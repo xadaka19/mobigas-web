@@ -1,5 +1,12 @@
 {
-  "projects": {
-    "default": "mobigas-prod"
+  "projects": { "default": "mobigas-prod" },
+  "targets": {
+    "mobigas-prod": {
+      "hosting": {
+        "ke": ["mobigas-prod"],
+        "tz": ["mobigas-tz"],
+        "ug": ["mobigas-ug"]
+      }
+    }
   }
 }

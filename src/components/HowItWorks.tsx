@@ -1,31 +1,21 @@
-import { UserPlus, CreditCard, ShoppingBag, CheckCircle } from 'lucide-react'
+import { UserPlus, CreditCard, ShoppingBag, CheckCircle, MapPin } from 'lucide-react'
+import { country } from '../config/countries'
 
-const steps = [
-  {
-    icon: UserPlus,
-    title: 'Sign up in 2 minutes',
-    desc: 'Download the app, register with your ID and phone number. Add two guarantors.',
-    color: 'bg-blue-500',
-  },
-  {
-    icon: CreditCard,
-    title: 'Get instant credit limit',
-    desc: 'Our partner bank runs an instant CRB check and sets your credit limit in seconds. Like a credit card — but for gas.',
-    color: 'bg-purple-500',
-  },
-  {
-    icon: ShoppingBag,
-    title: 'Order gas anytime',
-    desc: 'Browse verified vendors near you. Select your gas size and confirm. Vendor delivers in 10–40 min.',
-    color: 'bg-[#F97316]',
-  },
-  {
-    icon: CheckCircle,
-    title: 'Confirm & pay later',
-    desc: 'Give the vendor your 4-digit PIN. Bank pays vendor instantly. You repay within 30 days via M-Pesa. Bank interest applies.',
-    color: 'bg-green-500',
-  },
+const creditSteps = [
+  { icon: UserPlus, title: 'Sign up in 2 minutes', desc: 'Download the app, register with your ID and phone number. Add two guarantors.', color: 'bg-blue-500' },
+  { icon: CreditCard, title: 'Get instant credit limit', desc: 'Our partner bank runs an instant CRB check and sets your credit limit in seconds. Like a credit card — but for gas.', color: 'bg-purple-500' },
+  { icon: ShoppingBag, title: 'Order gas anytime', desc: 'Browse verified vendors near you. Select your gas size and confirm. Vendor delivers in 10–40 min.', color: 'bg-[#F97316]' },
+  { icon: CheckCircle, title: 'Confirm & pay later', desc: 'Give the vendor your 4-digit PIN. Bank pays vendor instantly. You repay within 30 days via M-Pesa. Bank interest applies.', color: 'bg-green-500' },
 ]
+
+const cashSteps = [
+  { icon: UserPlus, title: 'Sign up in 2 minutes', desc: 'Download the app and register with your phone number. Ready to order in minutes.', color: 'bg-blue-500' },
+  { icon: MapPin, title: 'Find vendors near you', desc: 'Browse verified gas vendors within 8km. Compare prices and pick the best one for you.', color: 'bg-purple-500' },
+  { icon: ShoppingBag, title: 'Order gas anytime', desc: 'Select your gas size and confirm. Vendor delivers to your door in 10–40 min.', color: 'bg-[#F97316]' },
+  { icon: CheckCircle, title: 'Confirm & pay on delivery', desc: `Pay with cash or ${country.payment} when your gas arrives. Give the vendor your 4-digit PIN to confirm.`, color: 'bg-green-500' },
+]
+
+const steps = country.showCredit ? creditSteps : cashSteps
 
 export default function HowItWorks() {
   return (
@@ -36,10 +26,12 @@ export default function HowItWorks() {
             Simple process
           </div>
           <h2 className="text-4xl font-black text-[#0D1B40] mb-4">
-            Gas on credit in 4 steps
+            {country.showCredit ? 'Gas on credit in 4 steps' : 'Gas delivered in 4 steps'}
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            No bank visits. No forms. No waiting. Just gas delivered to your door.
+            {country.showCredit
+              ? 'No bank visits. No forms. No waiting. Just gas delivered to your door.'
+              : 'No accounts. No waiting. Just gas delivered to your door — pay when it arrives.'}
           </p>
         </div>
 

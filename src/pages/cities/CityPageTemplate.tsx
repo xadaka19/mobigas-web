@@ -14,7 +14,7 @@ export default function CityPageTemplate({ city, county, neighborhoods, descript
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Gas Delivery in {city} | Order LPG Gas on Credit - MobiGas</title>
+        <title>{`Gas Delivery in ${city} | Order LPG Gas on Credit - MobiGas`}</title>
         <meta name="description" content={`Fast cooking gas delivery in ${city} in 10-40 minutes. Order LPG gas on credit and pay later via M-Pesa. Verified vendors across ${city} neighborhoods.`} />
       </Helmet>
       <div className="bg-[#0D1B40] py-6 px-6">
